@@ -1,0 +1,36 @@
+section.all-quiz{
+    flex: 1;
+    .quiz-wrapper{
+       &::-webkit-scrollbar {
+            width: 1em;
+        }
+       &::-webkit-scrollbar-track {
+            -webkit-box-shadow: inset 0 0 6px rgba(0,0,0,0.3);
+        }
+       &::-webkit-scrollbar-thumb {
+          background-color: #b2b3d3;
+          outline: 1px solid #7958ce;
+          border-radius: 10px;
+        }
+        display: flex;
+        height: 450px;
+        flex-direction: column;
+        overflow: auto;
+    }
+    .quiz{
+        display: inline-flex;
+        flex-direction: column;
+        align-items: center;
+        padding: 20px 30px;
+        background: white;
+        border: 1px solid;
+        border-radius: 15px;
+        margin: 10px auto;
+        width: 200px;
+        img{
+            width: 150px;
+            height: 150px;
+            object-fit: cover;
+        }
+    }
+}

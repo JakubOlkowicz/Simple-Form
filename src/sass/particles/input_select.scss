@@ -1,0 +1,48 @@
+@import '../variable.scss';
+
+.custom-select {
+    position: relative;
+    select {
+        display: none; 
+      }
+  }  
+  .select-selected {
+    background-color: transparent;
+    &:after {
+        position: absolute;
+        content: "";
+        bottom: 35%;
+        right: 10px;
+        width: 0;
+        height: 0;
+        border: 6px solid transparent;
+        border-color: $color-pink transparent transparent transparent;
+      }
+    &.select-arrow-active:after {
+        border-color: transparent transparent $color-pink transparent;
+        top: 7px;
+    }
+  }
+  .select-items div,.select-selected {
+    font-size: 16px;
+    font-weight: bold;
+    color:  $color-font;
+    padding: 8px 16px;
+    border: 1px solid transparent;
+    border-color: transparent transparent $color-gray transparent;
+    cursor: pointer;
+  }
+    .select-items {
+    position: absolute;
+    background-color: $color-background;
+    top: 100%;
+    left: 0;
+    right: 0;
+    z-index: 99;
+  }
+    .select-hide {
+    display: none;
+  }
+  .select-items div:hover, .same-as-selected {
+    background-color: rgba(0, 0, 0, 0.1);
+  }

@@ -1,0 +1,88 @@
+@import './variable.scss';
+html,body {
+    height:100%;
+    width:100%;
+    margin:0;
+  }
+body{
+    background-color: $color-background;
+    font-family: 'Roboto', sans-serif;
+    font-size: 12px;
+    color: $color-font;
+    display: flex;
+}
+main.form {
+    margin:auto 0;
+    width: 100%;
+    display: flex;
+    form{
+        flex: 4;
+    }
+    .inputs {
+        display: flex;
+        justify-content: space-around;
+        .details,.topic{
+            width: 40%;
+        }
+        .title{
+            font-size: 16px;
+        }
+        .input-box{
+            display: flex;
+            flex-direction: column;
+            margin: 15px 0;
+            min-height: 120px;
+            input,
+            input:-webkit-autofill,
+            input:-webkit-autofill:hover, 
+            input:-webkit-autofill:focus, 
+            .select-selected{
+                -webkit-box-shadow: 0 0 0 30px $color-background inset !important;
+                background-color: #f2f2f2 !important;
+                padding: 10px;
+                border: none;
+                border-bottom: 1px solid $color-gray;
+                margin: 10px 0;
+                font-weight: bold;
+                color: $color-font !important;
+                font-size: 16px;
+                &:focus{
+                    outline: none;
+                    border-color: $color-special;
+                }
+                &:hover{
+                    border-color: $color-special;
+                }
+                &.error,.select-selected.error{
+                    border-color: red;
+                }
+            }
+            .select-selected{
+                margin-bottom: 0;
+            }
+        }
+    }
+}
+.procced{
+    all: unset;
+    margin: 0 auto;
+    display: block;
+    padding: 10px 40px;
+    background: $color-pink;
+    border-radius: 25px;
+    text-align: center;
+    color: white;
+    cursor: pointer;
+}
+.valid{
+    color: red;
+    visibility: hidden;
+    text-align: center;
+}
+*::placeholder { 
+    color: $color-gray;
+    opacity: 1; 
+  }
+.active{
+    visibility: visible;
+}
